@@ -1,0 +1,26 @@
+{
+  "name": "ans-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server that indexes Node.js pages, creates context directories, and exposes tool calls",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "ans-mcp": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsx src/index.ts",
+    "inspect": "npx -y @modelcontextprotocol/inspector node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "glob": "^11.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
